@@ -11,8 +11,8 @@ public class GreetingController {
     @MessageMapping("/hello")
     @SendTo("/topic/greetings")
     public Greeting greet(HelloMessage helloMessage) {
-        System.out.println("bati aqui");
-        return new Greeting("Hello, " + HtmlUtils.htmlEscape(helloMessage.getName()) + "!");
+        return new Greeting("Hello, " + HtmlUtils.htmlEscape(helloMessage.getName())
+                + "!");
     }
 
 }
